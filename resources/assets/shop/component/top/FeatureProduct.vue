@@ -123,6 +123,7 @@
             },
 
             previewProduct(product) {
+                console.log(product)
                 this.$emit('previewProduct', product)
             }
         },

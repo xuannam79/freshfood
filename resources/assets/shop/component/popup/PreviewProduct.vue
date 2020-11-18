@@ -11,32 +11,25 @@
                             <div class="col-lg-5 col-md-5 col-sm-12">
                                 <div class="product-flags madal">
                                     <div class="tab-content" id="pills-tabContent">
-                                        <div class="tab-pane fade show active" id="imgeone" role="tabpanel" >
+                                        <div :class="['tab-pane fade', { 'show active' : index === 0 }]"
+                                             :id="'image-'+image.id" role="tabpanel"
+                                             v-for="(image, index) in previewProduct.images" :key="image.id">
                                             <div class="product_tab_img">
-                                                <a href="#"><img src="assets/img/cart/nav12.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="imgetwo" role="tabpanel">
-                                            <div class="product_tab_img">
-                                                <a href="#"><img src="assets/img/cart/nav11.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="imgethree" role="tabpanel">
-                                            <div class="product_tab_img">
-                                                <a href="#"><img src="assets/img/cart/nav13.jpg" alt=""></a>
+                                                <a href="#">
+                                                    <img :src="'/assets/shop/library/img/product/' + image.image">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="products_tab_button  modals">
                                         <ul class="nav product_navactive" role="tablist">
-                                            <li >
-                                                <a class="nav-link active" data-toggle="tab" href="#imgeone" role="tab" aria-controls="imgeone" aria-selected="false"><img src="assets/img/cart/nav.jpg" alt=""></a>
-                                            </li>
-                                            <li>
-                                                <a class="nav-link" data-toggle="tab" href="#imgetwo" role="tab" aria-controls="imgetwo" aria-selected="false"><img src="assets/img/cart/nav1.jpg" alt=""></a>
-                                            </li>
-                                            <li>
-                                                <a class="nav-link button_three" data-toggle="tab" href="#imgethree" role="tab" aria-controls="imgethree" aria-selected="false"><img src="assets/img/cart/nav2.jpg" alt=""></a>
+                                            <li v-for="(image, index) in previewProduct.images" :key="image.id">
+                                                <a :class="['nav-link', {'active' : index === 0}]"
+                                                   data-toggle="tab" :href="'#image-'+image.id"
+                                                   role="tab" :aria-controls="'#image-'+image.id"
+                                                   aria-selected="false">
+                                                    <img :src="'/assets/shop/library/img/product/' + image.image">
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -66,9 +59,7 @@
                                             </span>
                                         </div>
                                         <div class="product_information product_modal">
-                                            <div id="product_modal_content">
-                                                <p>Short-sleeved blouse with feminine draped sleeve detail.</p>
-                                            </div>
+                                            <br>
                                             <div class="product_variants">
                                                 <div class="product_variants_item modal_item">
                                                     <span class="control_label">Size</span>
