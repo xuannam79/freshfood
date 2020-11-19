@@ -1,5 +1,3 @@
-import { apiFeatureProducts } from "../api/product";
-
 const PRODUCT_FEATURE = 'product_feature'
 
 const state = {
@@ -25,9 +23,9 @@ const getters = {
 }
 
 export default {
-    namespace: true,
+    namespaced: true,
     state,
     actions,
     mutations,
-    getters
+    getters,
 }

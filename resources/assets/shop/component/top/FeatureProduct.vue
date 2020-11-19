@@ -63,14 +63,13 @@
 
 <script>
     import { mapGetters, mapState } from 'vuex'
-    // import {apiFeatureProducts} from "../../api/product";
     import { apiFeatureProducts } from '@/api/product'
 
     export default {
         name: "FeatureProduct",
         computed: {
             ...mapGetters({
-                productFeature: 'product_feature',
+                productFeature: 'product/product_feature',
             })
         },
         created() {
@@ -123,7 +122,6 @@
             },
 
             previewProduct(product) {
-                console.log(product)
                 this.$emit('previewProduct', product)
             }
         },

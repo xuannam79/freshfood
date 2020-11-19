@@ -31,7 +31,7 @@ class ProductController extends Controller
     /**
      * @api /product-feature
      *
-     * @return Product oblject
+     * @return Product
      */
     public function getListFeature()
     {

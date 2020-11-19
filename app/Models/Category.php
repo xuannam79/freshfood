@@ -7,6 +7,8 @@ use App\Models\Product;
 
 class Category extends Model
 {
+    const Parent = 0;
+
     protected $table = 'categories';
     protected $primaryKey = 'id';
     public $timestamps = false;

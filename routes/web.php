@@ -26,6 +26,10 @@ Route::namespace('App\Http\Controllers\Shop')->group(function(){
         'uses' => 'ProductController@getListFeature',
         'as' => 'product.feature'
     ]);
+    Route::get('/category-product',[
+        'uses' => 'CategoryController@getCategoryWithProduct',
+        'as' => 'category.product'
+    ]);
 //    Route::resource('category', 'CategoryController')->only([
 //        'index', 'show',
 //    ]);
