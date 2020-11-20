@@ -32,45 +32,6 @@
             navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
             items: 1,
         });
-        $('.shop-product_list').owlCarousel({
-            loop: true,
-            nav: false,
-            autoplay: false,
-            autoplayTimeout: 5000,
-            navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-            items: 5,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                    nav:true
-                },
-                480:{
-                    items:2,
-                    nav:true
-                },
-                768:{
-                    items:2,
-                    nav:false
-                },
-                992:{
-                    items:3,
-                    nav:false
-                },
-
-                1300:{
-                    items:4,
-                    nav:true,
-                    loop:false
-                },
-                1600:{
-                    items:5,
-                    nav:true,
-                    loop:false
-                }
-
-            }
-        });
         $('.best_selling_product_list').owlCarousel({
             loop: true,
             nav: false,

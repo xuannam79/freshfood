@@ -117,7 +117,7 @@
             async getListFeature() {
                 let response = await apiFeatureProducts()
                 if (response.status == 200) {
-                    this.$store.dispatch('actionProductFeature', response.data)
+                    this.$store.dispatch('product/actionProductFeature', response.data)
                 }
             },
 
